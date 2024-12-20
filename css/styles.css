@@ -83,8 +83,12 @@ h1, h2, h3, h4, h5, h6, p {
 /* #region header */
 
 .header {
+  position: sticky;
+  top: 0;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+    background-color: #ffffff;
+  z-index: 999;
 }
 
 .header-nav {
@@ -171,12 +175,14 @@ h1, h2, h3, h4, h5, h6, p {
   cursor: pointer;
   border: none;
   border-radius: 4px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn:hover,
 .btn:focus {
   background-color: #404bbf;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 /* #endregion hero */
@@ -274,6 +280,15 @@ h1, h2, h3, h4, h5, h6, p {
 
 .item-gallery-img {
   margin-bottom: 24px;
+}
+
+.card-gallery-text {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e7e9fc;
+  border-left: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
 }
 
 .item-gallery-subtitle {
@@ -419,12 +434,15 @@ margin-bottom: 24px;
   cursor: pointer;
   border: none;
   border-radius: 4px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
 .form-btn:hover,
 .form-btn:focus {
   background-color: #404bbf;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 /* #endregion footer */
